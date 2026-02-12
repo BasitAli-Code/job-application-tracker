@@ -26,7 +26,7 @@ export default function GetApplications() {
     fetchJobs();
   }, []);
 
-  // Filter Logic: Search by Company or Position
+  // Search by Company or Position
   const filteredJobs = jobs.filter(
     (job) =>
       job.companyName.toLowerCase().includes(searchTerm.toLowerCase()) ||

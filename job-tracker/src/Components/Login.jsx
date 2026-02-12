@@ -79,7 +79,7 @@ export default function Login() {
               className={`p-4 rounded-xl bg-gray-800 text-white border ${errors.email ? "border-red-500" : "border-gray-700"} focus:outline-none focus:ring-2 focus:ring-green-500`}
               required
             />
-            {/* Error Paragraph is here */}
+            {/* Error Paragraph */}
             {errors.email && (
               <p className="text-red-400 text-xs ml-1">{errors.email}</p>
             )}

@@ -62,7 +62,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* 1. Statistics Cards Section */}
+      { /* Cards Section */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         <StatBox
           label="Pending"
@@ -90,7 +90,7 @@ const Dashboard = () => {
         />
       </div>
 
-      {/* 2. Recent Applications List View */}
+      {/* Recent Applications */}
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold">Recent Activity</h2>

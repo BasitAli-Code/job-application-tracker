@@ -57,7 +57,7 @@ export default function AddJob() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Get token from localStorage (saved during login)
+      
       const user = JSON.parse(localStorage.getItem("user"));
       const config = {
         headers: {
