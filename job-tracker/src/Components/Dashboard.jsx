@@ -19,7 +19,7 @@ const Dashboard = () => {
         const user = JSON.parse(localStorage.getItem("user"));
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const res = await axios.get(
-          "http://localhost:3000/api/jobApplication/dashboard",
+          `${import.meta.env.VITE_API_URL}/api/jobApplication/dashboard`,
           config,
         );
         setData(res.data);

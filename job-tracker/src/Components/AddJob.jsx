@@ -24,7 +24,7 @@ export default function AddJob() {
           };
 
           const res = await axios.get(
-            `http://localhost:3000/api/jobApplication/${id}`,
+            `${import.meta.env.VITE_API_URL}/api/jobApplication/${id}`,
             config,
           );
 
@@ -57,7 +57,6 @@ export default function AddJob() {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      
       const user = JSON.parse(localStorage.getItem("user"));
       const config = {
         headers: {
@@ -68,7 +67,7 @@ export default function AddJob() {
       //update case
       if (id) {
         await axios.put(
-          `http://localhost:3000/api/jobApplication/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/jobApplication/${id}`,
           formData,
           config,
         );
@@ -78,7 +77,7 @@ export default function AddJob() {
       } else {
         //add case
         await axios.post(
-          "http://localhost:3000/api/jobApplication/",
+          `${import.meta.env.VITE_API_URL}/api/jobApplication/`,
           formData,
           config,
         );

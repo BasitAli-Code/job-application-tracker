@@ -14,7 +14,7 @@ export default function GetApplications() {
         const user = JSON.parse(localStorage.getItem("user"));
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         const res = await axios.get(
-          "http://localhost:3000/api/jobApplication",
+          `${import.meta.env.VITE_API_URL}/api/jobApplication`,
           config,
         );
         setJobs(res.data);
@@ -47,7 +47,7 @@ export default function GetApplications() {
         const user = JSON.parse(localStorage.getItem("user"));
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
         await axios.delete(
-          `http://localhost:3000/api/jobApplication/${id}`,
+          `${import.meta.env.VITE_API_URL}/api/jobApplication/${id}`,
           config,
         );
         setJobs(jobs.filter((j) => j._id !== id));

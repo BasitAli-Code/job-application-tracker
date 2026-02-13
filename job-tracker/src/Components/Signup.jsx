@@ -68,11 +68,14 @@ export default function Signup() {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/api/users", {
-        name: formData.name,
-        email: formData.email,
-        password: formData.password,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/users`,
+        {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        },
+      );
 
       if (response.data) {
         localStorage.setItem("user", JSON.stringify(response.data));

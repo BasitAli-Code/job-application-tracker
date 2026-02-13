@@ -34,7 +34,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/users/login",
+        `${import.meta.env.VITE_API_URL}/api/users/login`,
         formData,
       );
 
